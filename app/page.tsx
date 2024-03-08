@@ -1,7 +1,7 @@
 import axios from "axios";
 
 async function getUserDetails() {
-  const response = await axios.get("http://localhost:3002/api/user")
+  const response = await axios.get("http://localhost:3003/api/user")
 	return response.data;
 }
 
