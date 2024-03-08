@@ -8,15 +8,16 @@ async function getUserDetails() {
 export default async function Home() {
   const getUserDetail = await getUserDetails();
   return (
-    <div>
-      Hi there <br />
-      <div>
-          {getUserDetail.email}
+    <div className="flex flex-col justify-center h-screen">
+      <div className="flex justify-center">
+        <div className="border p-8 rounded">
+            Name : {getUserDetail.email}
+            <div>
+            Email : {getUserDetail.name}
+            </div>
+        </div>
+            
       </div>
-      <div> 
-          {getUserDetail.name}
-      </div>
-
     </div>
       );
 }
