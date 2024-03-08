@@ -1,3 +1,5 @@
+import { NextRequest } from "@/node_modules/next/server"
+
 export function GET() {
     return Response.json({
         email:"sumit.nair26@gmail.com",
@@ -5,9 +7,10 @@ export function GET() {
     })
 }
 
-export function POST() {
+export async function POST(req: NextRequest) {
+    const body = await req.json();
+    console.log(body);
     return Response.json({
-        email:"sumit.nair26@gmail.com",
-        name:"Sumit Nair"
+        message: "You are logged in"
     })
 }
