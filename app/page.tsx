@@ -3,7 +3,6 @@ import { PrismaClient } from "@/node_modules/.prisma/client/index";
 const client = new PrismaClient();
 
 async function getUserDetails() {
-  console.log('function has been called');
   // const response = await axios.get("http://localhost:3003/api/user")
 	// return response.data;
 
